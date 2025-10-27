@@ -1,0 +1,45 @@
+.home-container {
+  text-align: center;
+  padding-top: 120px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8fafc, #e0e7ff);
+  height: 100vh;
+}
+
+.home-container h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-btn {
+  padding: 12px 28px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.footer-text {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Login.css";
+import "../Login.css";
+
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Login Success!\nEmail: ${email}`);
+    navigate("/dashboard");
+
   };
 
   return (
     <div className="login-container">
-      <h2>User Login</h2>
+      <h2>ShopSaver Login</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="email"
@@ -32,14 +35,28 @@ function Login() {
         <button type="submit">Login</button>
       </form>
 
-      <p className="signup-text">
+      {/* New user link */}
+      <p style={{ marginTop: "10px" }}>
         New user?{" "}
-        <Link to="/user-signup" className="signup-link">
-          Create Account
-        </Link>
+        <span
+          onClick={() => navigate("/user-signup")}
+          style={{ color: "#007bff", cursor: "pointer" }}
+        >
+          Create account
+        </span>
       </p>
-      <p className="signup-text">
-        <Link to="/" className="signup-link">⬅ Back to Home</Link>
+
+      {/* Back to home link */}
+      <p
+        onClick={() => navigate("/")}
+        style={{
+          color: "gray",
+          cursor: "pointer",
+          marginTop: "5px",
+          textDecoration: "underline",
+        }}
+      >
+        ← Back to Home
       </p>
     </div>
   );
