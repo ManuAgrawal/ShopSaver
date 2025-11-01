@@ -11,7 +11,7 @@ function Dashboard() {
     expiryDate: "",
   });
 
-  // Add product
+  
   const handleAddProduct = (e) => {
     e.preventDefault();
     setProducts([...products, formData]);
@@ -24,7 +24,7 @@ function Dashboard() {
     });
   };
 
-  // Remove product
+  
   const handleRemove = (index) => {
     const updated = products.filter((_, i) => i !== index);
     setProducts(updated);
